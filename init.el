@@ -87,9 +87,6 @@ This function should only modify configuration layer settings."
 
      ;; SPC g s opens Magit git client full screen (q restores previous layout)
      ;; refine hunk 'all highlights characters changed on each line
-     (git :variables
-          git-magit-status-fullscreen t
-          magit-diff-refine-hunk 'all)
 
      ;; SPC g h to use GitHub repositories
      ;; SPC g g to use GitHub Gists
@@ -275,7 +272,7 @@ It should only modify the values of Spacemacs settings."
    ;; This variable has no effect if Emacs is launched with the parameter
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
-   dotspacemacs-elpa-https t
+   dotspacemacs-elpa-https
 
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    ;; (default 5)
@@ -292,7 +289,7 @@ It should only modify the values of Spacemacs settings."
    ;; Setting this >= 1 MB should increase performance for lsp servers
    ;; in emacs 27.
    ;; (default (* 1024 1024))
-   dotspacemacs-read-process-output-max (* 1024 1024)
+   ;; dotspacemacs-read-process-output-max (* 1024 1024)
 
    ;; If non-nil then Spacelpa repository is the primary source to install
    ;; a locked version of packages. If nil then Spacemacs will install the
@@ -375,8 +372,8 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
 
-   dotspacemacs-themes '(doom-solarized-dark
-                         kaolin-valley-dark
+   dotspacemacs-themes '(kaolin-valley-dark
+                         doom-solarized-dark
                          spacemacs-dark
                          doom-gruvbox-light
                          doom-solarized-light
@@ -1240,11 +1237,7 @@ before packages are loaded."
   (setq eshell-prompt-regexp " \x2130 ")   ; or "└─> "
   (setq eshell-prompt-string " \x2130 ")   ; or "└─> "
   ;;
-  ;; Choose which eshell-funcs to enable
-  ;; (setq eshell-funcs (list esh-dir esh-git esh-python esh-clock esh-num))
-  ;; (setq eshell-funcs (list esh-dir esh-git esh-clock esh-num))
-  (setq eshell-funcs (list esh-dir esh-git))
-
+  
   ;; Enable the new eshell prompt
   (setq eshell-prompt-function 'esh-prompt-func)
 
