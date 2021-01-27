@@ -851,9 +851,6 @@ before packages are loaded."
   ;; Set locations of all your Git repositories
   ;; with a number to define how many sub-directories to search
   ;; `SPC g L' - list all Git repositories in the defined paths,
-  (setq magit-repository-directories
-        '(("~/.emacs.d"  . 0)
-          ("~/projects/" . 2)))
   ;;
   ;; end of version control configuration
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1206,10 +1203,6 @@ before packages are loaded."
                (abbreviate-file-name (eshell/pwd))
                '(:foreground "olive" :bold bold :underline t))
   ;;
-  (esh-section esh-git
-               "\xf397"  ;  (git branch icon)
-               (magit-get-current-branch)
-               '(:foreground "maroon"))
   ;;
   ;; (esh-section esh-python
   ;;              "\xe928"  ;  (python icon)
