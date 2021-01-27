@@ -114,7 +114,7 @@ This function should only modify configuration layer settings."
            helm-follow-mode-persistent t)
 
      html
-     ;; javascript
+     javascript
      json
 
      ;; Clojure specific configuration in dotspacemacs/user-config
@@ -375,13 +375,13 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
 
-   dotspacemacs-themes '(doom-gruvbox-light
+   dotspacemacs-themes '(doom-solarized-dark
+                         kaolin-valley-dark
+                         spacemacs-dark
+                         doom-gruvbox-light
                          doom-solarized-light
                          doom-sourcerer
-                         kaolin-valley-dark
-                         doom-solarized-dark
-                         spacemacs-light
-                         spacemacs-dark)
+                         spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
